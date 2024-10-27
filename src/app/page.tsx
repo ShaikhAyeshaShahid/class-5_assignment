@@ -1,35 +1,32 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="p-8 space-y-16">
-    {/* Section 1 - Three cards */}
-    <section className="flex flex-wrap gap-6 justify-center">
-      <div className="w-full sm:w-1/3 bg-blue-500 p-6 text-white rounded-md shadow-md">
-        <h2 className="text-xl font-semibold">Card 1</h2>
-        <p className="mt-2">Content for the first card.</p>
-      </div>
-      <div className="w-full sm:w-1/3 bg-green-500 p-6 text-white rounded-md shadow-md">
-        <h2 className="text-xl font-semibold">Card 2</h2>
-        <p className="mt-2">Content for the second card.</p>
-      </div>
-      <div className="w-full sm:w-1/3 bg-red-500 p-6 text-white rounded-md shadow-md">
-        <h2 className="text-xl font-semibold">Card 3</h2>
-        <p className="mt-2">Content for the third card.</p>
-      </div>
-    </section>
+    <div className="p-2 bg-white">
+      <section className="grid grid-cols-4 sm:grid-cols-3 gap-2">
+        <div >
+          <Image src='/image1.jpg' alt="Card 1 Image" width={500} height={120} className="rounded-md mb-4" />
+        </div>
+        <div>
+          <Image src='/image2.jpg' alt="Card 2 Image" width={500} height={300} className="rounded-md " />
+        </div>
+        <div>
+          <Image src='/image3.jpg' alt="Card 3 Image" width={500} height={120} className="rounded-md mb-4" />
+        </div>
+      </section>
 
-    {/* Section 2 - Two cards */}
-    <section className="flex flex-wrap gap-6 justify-center">
-      <div className="w-full sm:w-1/2 bg-yellow-500 p-6 text-white rounded-md shadow-md">
-        <h2 className="text-xl font-semibold">Card 4</h2>
-        <p className="mt-2">Content for the fourth card.</p>
-      </div>
-      <div className="w-full sm:w-1/2 bg-purple-500 p-6 text-white rounded-md shadow-md">
-        <h2 className="text-xl font-semibold">Card 5</h2>
-        <p className="mt-2">Content for the fifth card.</p>
-      </div>
-    </section>
-  </div>
-     );
+
+      <section className="grid grid-cols-6 sm:grid-cols-2 gap-2">
+        <div>
+          <img src='/image4.jpg' alt="Card 4 Image" className="rounded-md mb-4 w-full h-[200px] object-cover" />
+        </div>
+        <div>
+          <img src='/image5.jpg' alt="Card 5 Image" className="rounded-md mb-4 w-full h-[200px] object-cover" />
+        </div>
+      </section>
+
+
+
+    </div>
+  );
 }
